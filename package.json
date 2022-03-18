@@ -1,0 +1,23 @@
+{
+	"name": "woocommerce-product-bundles-grid-columns",
+	"title": "Product Bundles - Grid Columns",
+	"version": "1.0.0",
+	"homepage": "https://woocommerce.com/products/product-bundles/",
+	"license": "GPL-3.0+",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/somewherewarm/woocommerce-product-bundles-grid-columns.git"
+	},
+	"main": "Gruntfile.js",
+	"devDependencies": {
+		"grunt": "1.0.4",
+		"grunt-checktextdomain": "1.0.1",
+		"grunt-wp-i18n": "1.0.3",
+		"grunt-exec": "~3.0.0",
+		"request": "^2.88.0"
+	},
+	"engines": {
+		"node": ">=6.9.4",
+		"npm": ">=1.1.0"
+	}
+}

@@ -1,0 +1,51 @@
+# Copyright (C) 2021 SomewhereWarm
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: Product Bundles - Grid Columns 1.0.0\n"
+"Report-Msgid-Bugs-To: https://woocommerce.com/my-account/create-a-ticket/\n"
+"POT-Creation-Date: 2021-07-14 13:31:44+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: product-bundles-grid-columns.php:112
+msgid ""
+"<strong>Product Bundles &ndash; Grid Columns</strong> requires <a "
+"href=\"%1$s\" target=\"_blank\">WooCommerce Product Bundles</a> version "
+"<strong>%2$s</strong> or higher."
+msgstr ""
+
+#: product-bundles-grid-columns.php:134
+msgid "Number of grid columns"
+msgstr ""
+
+#: product-bundles-grid-columns.php:136
+msgid "Number of grid columns of bundled item thumbnails."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Product Bundles - Grid Columns"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://woocommerce.com/products/product-bundles"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Mini-extension for WooCommerce Product Bundles that allows you to use "
+"change the number of columns that are displayed on the Grid layout."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "SomewhereWarm"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://somewherewarm.com/"
+msgstr ""
