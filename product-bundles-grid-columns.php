@@ -170,7 +170,7 @@ class WC_PB_Grid_Columns {
 	public static function save_meta( $product ) {
 
 		if ( ! empty( $_POST[ '_wcpb_num_cols' ] ) && is_numeric( $_POST[ '_wcpb_num_cols' ] ) ) {
-			$product-> add_meta_data( '_wcpb_num_cols', stripslashes( $_POST[ '_wcpb_num_cols' ] ), true );
+			$product-> add_meta_data( '_wcpb_num_cols', stripslashes( wc_clean( $_POST[ '_wcpb_num_cols' ] )), true );
 		} else {
 			$product->add_meta_data( '_wcpb_num_cols', '3', true );
 		}
