@@ -94,7 +94,7 @@ class WC_PB_Grid_Columns {
 		add_action( 'init', array( __CLASS__, 'localize_plugin' ) );
 
 		// Display number of columns settings in "Bundled Products" tab.
-		add_action( 'woocommerce_bundled_products_admin_config', array( __CLASS__, 'display_options' ), 15 );
+		add_action( 'woocommerce_bundled_products_admin_config', array( __CLASS__, 'display_options' ), 14 );
 
 		// Save number of columns settings.
 		add_action( 'woocommerce_admin_process_product_object', array( __CLASS__, 'save_meta' ) );
@@ -125,40 +125,40 @@ class WC_PB_Grid_Columns {
 	/**
 	 * Admin number of columns settings.
 	 */
-	public static function display_options() {
+	public static function display_options( $product ) {
 
-		woocommerce_wp_text_input( array(
-			'id'            => '_wcpb_num_cols',
+		woocommerce_wp_text_input( array (
+			'id'            => '_wcpb_num_columns',
+			'value'         => self::wc_pb_grid_layout_change_number_of_columns( 3, $product ),
 			'wrapper_class' => 'bundled_product_data_field',
 			'type'          => 'number',
-			'label'         => __( 'Number of grid columns', 'woocommerce-product-bundles-grid-columns' ),
+			'label'         => __( 'Bundle Grid Columns', 'woocommerce-product-bundles-grid-columns' ),
 			'desc_tip'      => true,
-			'description'   => __( 'Number of grid columns of bundled item thumbnails.', 'woocommerce-product-bundles-grid-columns' )
+			'description'   => __( 'Number of columns of bundled items when the Grid Layout is used.', 'woocommerce-product-bundles-grid-columns' )
 		) );
 
 		wc_enqueue_js( '
 			( function ( $ ) {
 				$( document ).ready( function() {
-					var $layout   = $( "#_wc_pb_layout_style" ),
-				        $num_cols = $( "._wcpb_num_cols_field" );
+					var $layout      = $( "#_wc_pb_layout_style" ),
+						$num_cols    = $( "._wcpb_num_columns_field" );
 
-					var toggle    = function( $layout, $num_cols ){
-						if ( $layout.val() != "grid" ){
+					var toggle_grid_cols = function ( $layout, $num_cols ) {
+						if ( $layout.val() != "grid" ) {
 							$num_cols.hide();
 						} else {
 							$num_cols.show();
 						}
 					}
 
-					toggle( $layout, $num_cols );
+					toggle_grid_cols( $layout, $num_cols );
 
-					layout.on( "change", function() {
-						toggle( $layout, $num_cols );
+					$layout.on( "change", function() {
+						toggle_grid_cols( $layout, $num_cols );
 					});
 				});
 			}( jQuery ) );
 		' );
-
 	}
 
 	/**
